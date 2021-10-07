@@ -204,6 +204,10 @@
   }
 }
 @media all and (min-width: 1200px) {
+  #popularCourse {
+    padding: 100px;
+  }
+
   .navbar .nav-item .dropdown-menu {
     display: none;
   }
@@ -383,7 +387,6 @@
   height: 800px;
   background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
     url(../img/nav-background.jpeg);
-  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
 }
@@ -412,4 +415,164 @@
   color: #f60;
   background-color: white;
   cursor: pointer;
+}
+
+#projectManagement {
+  background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+    url(../img/street-sign.jpeg);
+  background-size: 500px 500px;
+  background-position: center center;
+}
+
+#agileTransformation {
+  background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+    url(../img/working-1.jpeg);
+  background-size: 500px 500px;
+  background-position: center center;
+}
+
+#itServiceManagement {
+  background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+    url(../img/working2.jpeg);
+  background-size: 500px 500px;
+  background-position: center center;
+}
+/* agileTransformation  */
+
+#agileTransformation #textDiv1 h3 {
+  color: white;
+}
+
+#agileTransformation #textDiv1 p {
+  color: #adadad;
+  font-size: 18px;
+}
+/* projectManagement */
+
+#projectManagement #textDiv1 h3 {
+  color: white;
+}
+
+#projectManagement #textDiv1 p {
+  color: #adadad;
+  font-size: 18px;
+}
+/* itServiceManagement  */
+
+#itServiceManagement #textDiv1 h3 {
+  color: white;
+}
+
+#itServiceManagement #textDiv1 p {
+  color: #adadad;
+  font-size: 18px;
+}
+
+#popularCourse {
+  background: url(../img/bg-popular-course.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* first row */
+#popularCourse .popularCourse_catalog .column1 {
+  position: relative;
+  background: url(../img/working2.jpeg);
+  background-repeat: no-repeat;
+  background-size: 440px 530px;
+  background-position: center center;
+}
+
+#popularCourse .popularCourse_catalog .column2 {
+  position: relative;
+  background: url(../img/presentation.jpeg);
+  background-repeat: no-repeat;
+  background-size: 440px 530px;
+  background-position: center center;
+}
+
+#popularCourse .popularCourse_catalog .column3 {
+  position: relative;
+  background: url(../img/working-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: 440px 530px;
+  background-position: center center;
+}
+
+/* second row */
+#popularCourse .popularCourse_catalog .column4 {
+  position: relative;
+  background: url(../img/street-sign.jpeg);
+  background-repeat: no-repeat;
+  background-size: 440px 530px;
+  background-position: center center;
+}
+
+#popularCourse .popularCourse_catalog .column5 {
+  position: relative;
+  background: url(../img/two.jpeg);
+  background-repeat: no-repeat;
+  background-size: 440px 530px;
+  background-position: center center;
+}
+
+#popularCourse .popularCourse_catalog .column6 {
+  position: relative;
+  background: url(../img/working2.jpeg);
+  background-repeat: no-repeat;
+  background-size: 440px 530px;
+  background-position: center center;
+}
+
+#popularCourse .popularCourse_catalog .column1,
+.column2,
+.column3,
+.column4,
+.column5,
+.column6:hover {
+  cursor: pointer;
+}
+
+#popularCourse .popularCourse_catalog .column1 .textDiv_popularCourse {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+}
+
+#popularCourse .popularCourse_catalog .column2 .textDiv_popularCourse {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+}
+
+#popularCourse .popularCourse_catalog .column3 .textDiv_popularCourse {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+}
+#popularCourse .popularCourse_catalog .column4 .textDiv_popularCourse {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+}
+#popularCourse .popularCourse_catalog .column5 .textDiv_popularCourse {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+}
+#popularCourse .popularCourse_catalog .column6 .textDiv_popularCourse {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+}
+
+
+#personTaker a:hover{
+  color: #f60;
 }

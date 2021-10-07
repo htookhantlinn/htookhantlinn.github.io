@@ -22,3 +22,13 @@ window.addEventListener('scroll', () => {
         document.querySelector('nav').classList.add('bg-transparent')
 
 })
+
+
+function collapseText(column) {
+    document.querySelector(`.collapse_column${parseInt(column)}_text`).classList.remove('d-none')
+}
+
+function deCollapseText(column) {
+    document.querySelector(`.collapse_column${parseInt(column)}_text`).classList.add('d-none')
+
+}
