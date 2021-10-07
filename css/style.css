@@ -5,6 +5,17 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #collapse_img1 {
+    max-width: 100%;
+    width: 100%;
+  }
+  #collapse_img2 {
+    margin-top: 10px;
+    max-width: 100%;
+    width: 100%;
+    padding: 10%;
+  }
+
   #topSection #textDiv #btn_div {
     display: flex;
   }
@@ -155,6 +166,13 @@
   }
 }
 @media all and (max-width: 576px) {
+  #collapse_img1 {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #collapse_img2 {
+  }
   #mainmenu {
     background-color: rgba(18, 25, 36, 0.527);
   }
@@ -202,8 +220,30 @@
     height: 50px;
     border-radius: 25px;
   }
+
+  #collapse_img1 {
+    max-width: 100%;
+    width: 100%;
+  }
+  #collapse_img2 {
+    margin-top: 10px;
+    max-width: 100%;
+    width: 100%;
+    padding: 10%;
+  }
 }
 @media all and (min-width: 1200px) {
+  #collapse_img1 {
+    max-width: 100%;
+    width: 100%;
+    margin-left: -10px;
+  }
+  #collapse_img2 {
+    max-width: 100%;
+    width: 100%;
+    margin-left: -50%;
+  }
+
   #popularCourse {
     padding: 100px;
   }
@@ -572,7 +612,27 @@
   right: 20%;
 }
 
-
-#personTaker a:hover{
+#personTaker a:hover {
   color: #f60;
+}
+
+.card-body{
+  height: 100px;
+  width: 80%;
+  background-color: white;
+  z-index: 9999;
+  margin-top: -10%;
+  border: 1px solid black;
+}
+.card{
+  border: 0px;
+  margin: 5px;
+}
+
+#custom-indicator {
+  
+  width: 30px;
+  height: 30px;
+  background-color: #f60;
+  border-radius: 100%;
 }
