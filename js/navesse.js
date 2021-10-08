@@ -32,3 +32,11 @@ function deCollapseText(column) {
     document.querySelector(`.collapse_column${parseInt(column)}_text`).classList.add('d-none')
 
 }
+function removeGrayScale(img) {
+    img.style.cursor = 'pointer';
+    img.style.filter = 'grayscale(0%)';
+}
+
+function addGrayScale(img){
+    img.style.filter = 'grayscale(100%)';
+}

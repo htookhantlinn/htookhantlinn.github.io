@@ -5,6 +5,10 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #recommendation {
+    font-size: 31px;
+  }
+
   #collapse_img1 {
     max-width: 100%;
     width: 100%;
@@ -166,6 +170,9 @@
   }
 }
 @media all and (max-width: 576px) {
+  #recommendation {
+    font-size: 10px;
+  }
   #collapse_img1 {
     flex-shrink: 0;
     min-width: 100%;
@@ -233,6 +240,10 @@
   }
 }
 @media all and (min-width: 1200px) {
+  #recommendation {
+    font-size: 31px;
+  }
+
   #collapse_img1 {
     max-width: 100%;
     width: 100%;
@@ -616,23 +627,25 @@
   color: #f60;
 }
 
-.card-body{
+.card-body {
   height: 100px;
   width: 80%;
   background-color: white;
-  z-index: 9999;
   margin-top: -10%;
   border: 1px solid black;
 }
-.card{
+.card {
   border: 0px;
   margin: 5px;
 }
 
 #custom-indicator {
-  
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   background-color: #f60;
   border-radius: 100%;
+}
+
+.carousel-indicators {
+  margin-bottom: -1rem;
 }
