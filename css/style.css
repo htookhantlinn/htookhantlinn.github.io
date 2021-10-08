@@ -240,6 +240,8 @@
   }
 }
 @media all and (min-width: 1200px) {
+  
+
   #recommendation {
     font-size: 31px;
   }
@@ -648,4 +650,20 @@
 
 .carousel-indicators {
   margin-bottom: -1rem;
+}
+
+#footer_aboutUs_ul {
+  list-style: none;
+}
+
+#footer_aboutUs_ul li {
+  padding: 0.5rem;
+}
+#footer_aboutUs_ul li a {
+  color: #f60;
+  font-size: 18px ;
+  font-family: 'jost';
+}
+#footer_aboutUs_ul li a:hover{
+  color: white;
 }
