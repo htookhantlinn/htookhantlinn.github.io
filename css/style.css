@@ -240,8 +240,6 @@
   }
 }
 @media all and (min-width: 1200px) {
-  
-
   #recommendation {
     font-size: 31px;
   }
@@ -529,6 +527,7 @@
 
 /* first row */
 #popularCourse .popularCourse_catalog .column1 {
+  background-color: red;
   position: relative;
   background: url(../img/working2.jpeg);
   background-repeat: no-repeat;
@@ -624,6 +623,78 @@
   left: 20%;
   right: 20%;
 }
+#popularCourse .textDiv {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+#popularCourse .col1 {
+  border: 1px solid white;
+  position: relative;
+  background: url(../img/presentation.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+#popularCourse .col1:hover {
+  background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+    url(../img/presentation.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#popularCourse .col1:hover .textDiv {
+  bottom: 10%;
+  opacity: 1;
+}
+
+#popularCourse .col2 {
+  border: 1px solid white;
+  position: relative;
+  background: url(../img/working-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+#popularCourse .col2:hover {
+  background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+    url(../img/working-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#popularCourse .col2:hover .textDiv {
+  bottom: 10%;
+  opacity: 1;
+}
+
+#popularCourse .col3 {
+  border: 1px solid white;
+  position: relative;
+  background: url(../img/working2.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+#popularCourse .col3:hover {
+  background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+    url(../img/working2.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#popularCourse .col3:hover .textDiv {
+  bottom: 10%;
+  opacity: 1;
+}
 
 #personTaker a:hover {
   color: #f60;
@@ -661,9 +732,9 @@
 }
 #footer_aboutUs_ul li a {
   color: #f60;
-  font-size: 18px ;
-  font-family: 'jost';
+  font-size: 18px;
+  font-family: "jost";
 }
-#footer_aboutUs_ul li a:hover{
+#footer_aboutUs_ul li a:hover {
   color: white;
 }

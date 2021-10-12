@@ -2,68 +2,268 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Show Hide Dropdown Using CSS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ba7f482478.js" crossorigin="anonymous"></script>
     <style>
-        .hkl {
-            text-decoration: none;
-            font-family: Arial;
-            box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 3px 2px;
-            o-box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 3px 2px;
-            -moz-box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 3px 2px;
-            -webkit-box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 3px 2px;
-            background: #2ef1ff;
-            background: -o-linear-gradient(90deg, #2ef1ff, #005180);
-            background: -moz-linear-gradient(center top, #2ef1ff 5%, #005180 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2ef1ff), color-stop(1, #005180));
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ef1ff', endColorstr='#005180');
-            background: -webkit-linear-gradient(#2ef1ff, #005180);
-            background: -ms-linear-gradient(#2ef1ff, #005180);
-            background: linear-gradient(#2ef1ff, #005180);
-            text-indent: 0px;
-            line-height: 30px;
-            -moz-border-radius: 25px;
-            -webkit-border-radius: 25px;
-            border-radius: 25px;
-            text-align: center;
-            vertical-align: middle;
-            display: inline-block;
-            font-size: 20px;
-            color: #ffffff;
-            width: 100px;
-            height: 30px;
-            padding: 13px;
-            text-shadow: #198ab3 -1px -2px 0px;
-            border-color: #07657d;
-            border-width: 3px;
-            border-style: solid;
+        .popularCourse_catalog .column1 .textDiv_popularCourse {
+
+            position: absolute;
+            bottom: 10%;
+            left: 20%;
+            right: 20%;
         }
 
-        .hkl:active {
-            box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 0 2px;
-            o-box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 0 2px;
-            -moz-box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 0 2px;
-            -webkit-box-shadow: inset #008cba 0px 5px 11px 5px, #d6d6d6 0px 0 2px;
+        .column1 {
             position: relative;
-            top: 3px
+            cursor: pointer;
+            background:
+                url(./img/presentation.jpeg);
+            background-repeat: no-repeat;
+            background-size: 530px 530px;
+            background-position: center center;
+            text-align: center;
+            color: #f60;
         }
 
-        .hkl:hover {
-            background: #005180;
-            background: -o-linear-gradient(90deg, #005180, #2ef1ff);
-            background: -moz-linear-gradient(center top, #005180 5%, #2ef1ff 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #005180), color-stop(1, #2ef1ff));
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#005180', endColorstr='#2ef1ff');
-            background: -webkit-linear-gradient(#005180, #2ef1ff);
-            background: -ms-linear-gradient(#005180, #2ef1ff);
-            background: linear-gradient(#005180, #2ef1ff);
+
+
+        .column1:hover {
+            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+                url(./img/presentation.jpeg);
+            background-repeat: no-repeat;
+            background-size: 530px 530px;
+            background-position: center center;
+        }
+
+        /* ul li {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            background-color: #ADADAD;
+        }
+
+        span {
+            background-color: white;
+            text-align: center;
+            height: 40px;
+            width: 0px;
+            margin-right: 20px;
+            display: inline-block;
+            transition: 0.2s ease-in-out;
+            opacity: 0;
+        }
+
+        li:hover span {
+            width: 40px;
+            opacity: 1;
+        } */
+
+        .textDiv {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            transition: 0.2s linear;
+            opacity: 0;
+        }
+
+
+        .column1:hover .textDiv {
+            height: 250px;
+            opacity: 1;
+        }
+
+
+        
+
+        .col1 {
+            border: 1px solid white;
+            position: relative;
+            background:
+                url(./img/presentation.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+        }
+
+        .col2 {
+            border: 1px solid white;
+            position: relative;
+            background:
+                url(./img/working-1.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+        }
+
+        .col3 {
+            border: 1px solid white;
+            position: relative;
+            background:
+                url(./img/working2.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+        }
+
+        .col1:hover {
+            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+                url(./img/presentation.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .col2:hover {
+            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+                url(./img/working-1.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .col3:hover {
+            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
+                url(./img/working2.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .col2:hover .textDiv {
+            height: 250px;
+            opacity: 1;
+        }
+
+        .col1:hover .textDiv {
+            height: 250px;
+            opacity: 1;
+        }
+
+        .col3:hover .textDiv {
+            height: 250px;
+            opacity: 1;
         }
     </style>
-    </style>
+    <title>Document</title>
 </head>
 
 <body>
-<a class="hkl">ABC</a>
+    <div class="container m-5  popularCourse_catalog">
+        <div class="row">
+            <div class="col-md-12 column1 " style="height: 530px; width: 530px; ">
+                <div class="container  textDiv bg-info  p-5">
+                    <h1>PMP Boot Camp</h1>
+                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
+                        led.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-4 column4" style="height: 530px; " style="height: 530px;">
+                <div class="textDiv_popularCourse   text-center ">
+                    <span style="color: #ADADAD; ">04</span>
+                    <h2 class=" text-center" style="color:#f60;  ">PMT BOOT Camp</h2>
+                    <div class="d-none collapse_column4_text">
+                        <p style="color: white; font-size: 18px;">50+ hours, free online resources, and hands-on
+                            activity based live training led.</p>
+                        <span style="color: #f60; font-weight: bold; font-size: 18px;">Free Zoom Sections <i
+                                class="fa fa-arrow-right" aria-hidden="true"></i> </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 column5" style="height: 530px; ">
+                <div class="textDiv_popularCourse   text-center ">
+                    <span style="color: #ADADAD; ">04</span>
+                    <h2 class=" text-center" style="color:#f60;  ">PMT BOOT Camp</h2>
+                    <div class="d-none collapse_column5_text">
+                        <p style="color: white; font-size: 18px;">50+ hours, free online resources, and hands-on
+                            activity based live training led.</p>
+                        <span style="color: #f60; font-weight: bold; font-size: 18px;">Free Zoom Sections <i
+                                class="fa fa-arrow-right" aria-hidden="true"></i> </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 column6" style="height: 530px; ">
+                <div class="textDiv_popularCourse   text-center ">
+                    <span style="color: #ADADAD; ">06</span>
+                    <h2 class=" text-center" style="color:#f60;  ">PMT BOOT Camp</h2>
+                    <div class="d-none collapse_column6_text">
+                        <p style="color: white; font-size: 18px;">50+ hours, free online resources, and hands-on
+                            activity based live training led.</p>
+                        <span style="color: #f60; font-weight: bold; font-size: 18px;">Free Zoom Sections <i
+                                class="fa fa-arrow-right" aria-hidden="true"></i> </span>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div style="width: 300px; height: 300px;">
+        <ul>
+            <li> <span><i class="fa fa-trash" aria-hidden="true"></i></span> Swimming</li>
+            <li> <span><i class="fa fa-trash" aria-hidden="true"></i></span> Playing</li>
+            <li> <span><i class="fa fa-trash" aria-hidden="true"></i></span> Coding</li>
+        </ul>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row ">
+            <div class="col-xl-4 col-md-6 col-lg-6 bg-info col1" style="height: 450px;">
+                <div class="container  textDiv   p-5">
+                    <h1 style="color: #f60;">PMP Boot Camp</h1>
+                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
+                        led.
+                    </p>
+                    <p style="color: #f60;">Free Zoom Section <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-6 col2 ">
+
+                <div class="container  textDiv   p-5">
+                    <h1 style="color: #f60;">PMP Boot Camp</h1>
+                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
+                        led.
+                    </p>
+                    <p style="color: #f60;">Free Zoom Section <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
+
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-6 col3">
+                <div class="container  textDiv   p-5">
+                    <h1 style="color: #f60;">PMP Boot Camp</h1>
+                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
+                        led.
+                    </p>
+                    <p style="color: #f60;">Free Zoom Section <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+
+    </script>
+
 </body>
 
 </html>
