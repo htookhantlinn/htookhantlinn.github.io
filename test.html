@@ -5,265 +5,228 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Items Per Slide</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/ba7f482478.js" crossorigin="anonymous"></script>
     <style>
-        .popularCourse_catalog .column1 .textDiv_popularCourse {
 
-            position: absolute;
-            bottom: 10%;
-            left: 20%;
-            right: 20%;
+        @media (max-width: 767px) {
+            #recipeCarousel .carousel-inner .carousel-item > div {
+                display: none;
+            }
+
+            #recipeCarousel .carousel-inner .carousel-item > div:first-child {
+                display: block;
+            }
         }
 
-        .column1 {
-            position: relative;
-            cursor: pointer;
-            background:
-                url(./img/presentation.jpeg);
-            background-repeat: no-repeat;
-            background-size: 530px 530px;
-            background-position: center center;
-            text-align: center;
-            color: #f60;
+        #recipeCarousel .carousel-inner .carousel-item.active,
+        #recipeCarousel .carousel-inner .carousel-item-next,
+        #recipeCarousel .carousel-inner .carousel-item-prev {
+            display: flex;
         }
 
+        /* medium and up screens */
+        @media (min-width: 768px) {
 
+            #recipeCarousel .carousel-inner .carousel-item-end.active,
+            #recipeCarousel .carousel-inner .carousel-item-next {
+                transition: 0.2 linear;
+                transform: translateX(33.33%);
+            }
 
-        .column1:hover {
-            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
-                url(./img/presentation.jpeg);
-            background-repeat: no-repeat;
-            background-size: 530px 530px;
-            background-position: center center;
+            #recipeCarousel .carousel-inner .carousel-item-start.active,
+            #recipeCarousel .carousel-inner .carousel-item-prev {
+                transition: 0.2 linear;
+                transform: translateX(-33.33%);
+            }
         }
 
-        /* ul li {
-            cursor: pointer;
+        #recipeCarousel .carousel-inner .carousel-item-end,
+        #recipeCarousel .carousel-inner .carousel-item-start {
+            transform: translateX(0);
         }
 
-        ul {
-            list-style: none;
-            background-color: #ADADAD;
-        }
-
-        span {
+        #recipeCarousel .card-body {
+            height: 100px;
+            width: 80%;
             background-color: white;
-            text-align: center;
-            height: 40px;
-            width: 0px;
-            margin-right: 20px;
-            display: inline-block;
-            transition: 0.2s ease-in-out;
-            opacity: 0;
+            margin-top: -10%;
+            border: 1px solid black;
         }
 
-        li:hover span {
-            width: 40px;
-            opacity: 1;
-        } */
-
-        .textDiv {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            transition: 0.2s linear;
-            opacity: 0;
+        #recipeCarousel #custom-indicator {
+            width: 15px;
+            height: 15px;
+            background-color: #f60;
+            border-radius: 100%;
         }
 
-
-        .column1:hover .textDiv {
-            height: 250px;
-            opacity: 1;
-        }
-
-
-        
-
-        .col1 {
-            border: 1px solid white;
-            position: relative;
-            background:
-                url(./img/presentation.jpeg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            cursor: pointer;
-        }
-
-        .col2 {
-            border: 1px solid white;
-            position: relative;
-            background:
-                url(./img/working-1.jpeg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            cursor: pointer;
-        }
-
-        .col3 {
-            border: 1px solid white;
-            position: relative;
-            background:
-                url(./img/working2.jpeg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            cursor: pointer;
-        }
-
-        .col1:hover {
-            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
-                url(./img/presentation.jpeg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-
-        }
-
-        .col2:hover {
-            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
-                url(./img/working-1.jpeg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-
-        }
-
-        .col3:hover {
-            background: linear-gradient(rgba(22, 33, 46, 0.5), rgba(18, 25, 36, 0.527)),
-                url(./img/working2.jpeg);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-
-        }
-
-        .col2:hover .textDiv {
-            height: 250px;
-            opacity: 1;
-        }
-
-        .col1:hover .textDiv {
-            height: 250px;
-            opacity: 1;
-        }
-
-        .col3:hover .textDiv {
-            height: 250px;
-            opacity: 1;
+        #recipeCarousel .card {
+            border: 0px;
+            margin: 5px;
         }
     </style>
-    <title>Document</title>
 </head>
 
 <body>
-    <div class="container m-5  popularCourse_catalog">
-        <div class="row">
-            <div class="col-md-12 column1 " style="height: 530px; width: 530px; ">
-                <div class="container  textDiv bg-info  p-5">
-                    <h1>PMP Boot Camp</h1>
-                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
-                        led.
-                    </p>
+
+
+    <!-- https://navesse.com/wp-content/uploads/2019/01/iStock-626469402-600x600.jpg
+
+    https://navesse.com/wp-content/uploads/2021/08/millennial-asia-businessmen-businesswomen-meeting-brainstorming-ideas-about-new-paperwork-project-colleagues-working-together-planning-success-strategy-enjoy-teamwork-small-modern-night-office-600x600.jpg
+
+    https://navesse.com/wp-content/uploads/2021/08/Component-1-%E2%80%93-1@2x-1-600x600.png -->
+    <div class="container text-center my-3  shadow p-4" style="border: 1px solid black;">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class=" container d-none d-lg-block  " style=" position: absolute; bottom: -100px;">
+                    <div class="carousel-indicators">
+                        <button id="custom-indicator" type="button" data-bs-target="#recipeCarousel"
+                            data-bs-slide-to="0" class="active">
+                        </button>
+                        <button id="custom-indicator" type="button" data-bs-target="#recipeCarousel"
+                            data-bs-slide-to="1"></button>
+                        <button id="custom-indicator" type="button" data-bs-target="#recipeCarousel"
+                            data-bs-slide-to="2"></button>
+                        <button id="custom-indicator" type="button" data-bs-target="#recipeCarousel"
+                            data-bs-slide-to="3"></button>
+                        <button id="custom-indicator" type="button" data-bs-target="#recipeCarousel"
+                            data-bs-slide-to="4"></button>
+                        <button id="custom-indicator" type="button" data-bs-target="#recipeCarousel"
+                            data-bs-slide-to="5"></button>
+                    </div>
                 </div>
 
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://navesse.com/wp-content/uploads/2021/08/Component-1-%E2%80%93-1@2x-1-600x600.png"
+                                        style="max-width: 100%; width: 100%;">
+                                </div>
+                                <div class="card-body ">
+                                    <h4 class="card-title">Title</h4>
+                                    <p style="color: #f60;" class="card-text">Learn More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://navesse.com/wp-content/uploads/2019/01/iStock-626469402-600x600.jpg"
+                                        style="max-width: 100%; width: 100%;">
+                                </div>
+                                <div class="card-body ">
+                                    <h4 class="card-title">Title</h4>
+                                    <p style="color: #f60;" class="card-text">Learn More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://navesse.com/wp-content/uploads/2021/08/millennial-asia-businessmen-businesswomen-meeting-brainstorming-ideas-about-new-paperwork-project-colleagues-working-together-planning-success-strategy-enjoy-teamwork-small-modern-night-office-600x600.jpg"
+                                        style="max-width: 100%; width: 100%;">
+                                </div>
+                                <div class="card-body ">
+                                    <h4 class="card-title">Title</h4>
+                                    <p style="color: #f60;" class="card-text">Learn More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="    https://navesse.com/wp-content/uploads/2019/01/iStock-626469402-600x600.jpg"
+                                        style="max-width: 100%; width: 100%;">
+                                </div>
+                                <div class="card-body ">
+                                    <h4 class="card-title">Title</h4>
+                                    <p style="color: #f60;" class="card-text">Learn More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="./img/five.jpeg" style="max-width: 100%; width: 100%;">
+                                </div>
+                                <div class="card-body ">
+                                    <h4 class="card-title">Title</h4>
+                                    <p style="color: #f60;" class="card-text">Learn More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="./img/six.jpeg" style="max-width: 100%; width: 100%;">
+                                </div>
+                                <div class="card-body ">
+                                    <h4 class="card-title">Title</h4>
+                                    <p style="color: #f60;" class="card-text">Learn More <i class="fa fa-arrow-right"
+                                            aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
             </div>
-
         </div>
-        <!-- <div class="row">
-            <div class="col-md-4 column4" style="height: 530px; " style="height: 530px;">
-                <div class="textDiv_popularCourse   text-center ">
-                    <span style="color: #ADADAD; ">04</span>
-                    <h2 class=" text-center" style="color:#f60;  ">PMT BOOT Camp</h2>
-                    <div class="d-none collapse_column4_text">
-                        <p style="color: white; font-size: 18px;">50+ hours, free online resources, and hands-on
-                            activity based live training led.</p>
-                        <span style="color: #f60; font-weight: bold; font-size: 18px;">Free Zoom Sections <i
-                                class="fa fa-arrow-right" aria-hidden="true"></i> </span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4 column5" style="height: 530px; ">
-                <div class="textDiv_popularCourse   text-center ">
-                    <span style="color: #ADADAD; ">04</span>
-                    <h2 class=" text-center" style="color:#f60;  ">PMT BOOT Camp</h2>
-                    <div class="d-none collapse_column5_text">
-                        <p style="color: white; font-size: 18px;">50+ hours, free online resources, and hands-on
-                            activity based live training led.</p>
-                        <span style="color: #f60; font-weight: bold; font-size: 18px;">Free Zoom Sections <i
-                                class="fa fa-arrow-right" aria-hidden="true"></i> </span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4 column6" style="height: 530px; ">
-                <div class="textDiv_popularCourse   text-center ">
-                    <span style="color: #ADADAD; ">06</span>
-                    <h2 class=" text-center" style="color:#f60;  ">PMT BOOT Camp</h2>
-                    <div class="d-none collapse_column6_text">
-                        <p style="color: white; font-size: 18px;">50+ hours, free online resources, and hands-on
-                            activity based live training led.</p>
-                        <span style="color: #f60; font-weight: bold; font-size: 18px;">Free Zoom Sections <i
-                                class="fa fa-arrow-right" aria-hidden="true"></i> </span>
-                    </div>
-
-                </div>
-            </div>
-        </div> -->
-    </div>
-
-    <div style="width: 300px; height: 300px;">
-        <ul>
-            <li> <span><i class="fa fa-trash" aria-hidden="true"></i></span> Swimming</li>
-            <li> <span><i class="fa fa-trash" aria-hidden="true"></i></span> Playing</li>
-            <li> <span><i class="fa fa-trash" aria-hidden="true"></i></span> Coding</li>
-        </ul>
-    </div>
-
-    <div class="container mb-5">
-        <div class="row ">
-            <div class="col-xl-4 col-md-6 col-lg-6 bg-info col1" style="height: 450px;">
-                <div class="container  textDiv   p-5">
-                    <h1 style="color: #f60;">PMP Boot Camp</h1>
-                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
-                        led.
-                    </p>
-                    <p style="color: #f60;">Free Zoom Section <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-lg-6 col2 ">
-
-                <div class="container  textDiv   p-5">
-                    <h1 style="color: #f60;">PMP Boot Camp</h1>
-                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
-                        led.
-                    </p>
-                    <p style="color: #f60;">Free Zoom Section <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
-
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-lg-6 col3">
-                <div class="container  textDiv   p-5">
-                    <h1 style="color: #f60;">PMP Boot Camp</h1>
-                    <p style=" color:white">12+ hours, free online resources, and hands-on activity based live training
-                        led.
-                    </p>
-                    <p style="color: #f60;">Free Zoom Section <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
-
-                </div>
-            </div>
-           
-        </div>
     </div>
 
 
 
 
-    <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
 
     </script>
-
 </body>
 
 </html>
