@@ -178,8 +178,7 @@
     min-width: 100%;
     min-height: 100%;
   }
-  #collapse_img2 {
-  }
+
   #mainmenu {
     background-color: rgba(18, 25, 36, 0.527);
   }
@@ -240,6 +239,12 @@
   }
 }
 @media all and (min-width: 1200px) {
+  .counterDiv{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   #recommendation {
     font-size: 31px;
   }
@@ -793,4 +798,27 @@
 #recipeCarousel .card {
   border: 0px;
   margin: 5px;
+}
+
+.counterDiv .columns {
+  position: relative;
+}
+
+.counterDiv h1 {
+  font-size: 3rem;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.counterDiv .textDiv::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #ff6600;
+  width: 100px;
+  bottom: 5%;
+}
+
+.counterDiv {
+  background: url(../img/one.jpeg);
+  background-size: cover;
 }
